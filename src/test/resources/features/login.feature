@@ -18,12 +18,14 @@ Feature: Next CRM login functionality
       | hr29@cybertekschool.com        | UserUser |
       | hr30@cybertekschool.com        | UserUser |
 
-Scenario: login with wrong credentials
-  When User enters "username" and "password"
-  Then user should be able to see the error message
+  Scenario: login with wrong credentials
+    When User enters following invalid username and password
+      | username | something |
+      | password | pewpew    |
+    Then user should be able to see the error message
 
   Scenario: checking remember me button
     And user should be able to check remember me checkbox
 
-    Scenario: accessing forgot password link
-      And user should be able to access forgot password link
+  Scenario: accessing forgot password link
+    And user should be able to access forgot password link
