@@ -30,8 +30,6 @@ public class LoginPage {
 
     public DashBoardPage doLogin(String username, String password, boolean rememberMe) {
 
-        Driver.getDriver().get(ConfigurationReader.getProperty("URL"));
-
         usernameBox.sendKeys(username);
 
         passwordBox.sendKeys(password);
