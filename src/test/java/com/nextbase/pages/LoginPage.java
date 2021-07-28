@@ -28,6 +28,9 @@ public class LoginPage {
     @FindBy(xpath = "//a[@class='login-link-forgot-pass']")
     public WebElement forgotPasswordLink;
 
+    @FindBy(xpath = "//div[@class='errortext']")
+    public WebElement errorMessage;
+
     public DashBoardPage doLogin(String username, String password, boolean rememberMe) {
 
         usernameBox.sendKeys(username);
