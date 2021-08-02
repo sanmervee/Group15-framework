@@ -15,6 +15,15 @@ import static org.junit.Assert.assertTrue;
 
 public class BrowserUtils {
 
+    public static void switchToIframe(WebElement iframe) {
+    Driver.getDriver().switchTo().frame(iframe);
+    }
+
+
+    public static void switchToDefaultContent() {
+        Driver.getDriver().switchTo().defaultContent();
+    }
+
     /**
     This method accepts String expected title
     @param expectedTitle

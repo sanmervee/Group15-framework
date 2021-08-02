@@ -35,7 +35,6 @@ public class Driver {
             .getProperty method we creating in ConfigurationReader class.
              */
                 String browserType = ConfigurationReader.getProperty("browser");
-
             /*
             Depending on the browser type our switch statement will determine
             to open specific type of browser/driver
@@ -56,13 +55,10 @@ public class Driver {
                 }
             }
         }
-
         /*
         Same driver instance will be returned every time we call Driver.getDriver(); method
          */
         return driverPool.get();
-
-
     }
 
     /*
@@ -75,6 +71,4 @@ public class Driver {
             driverPool.remove();
         }
     }
-
-
 }
