@@ -4,6 +4,8 @@ import io.cucumber.java.*;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
+import static com.nextbase.utilities.BrowserUtils.sleep;
+
 public class Hooks {
 
 //    //Import from io.cucumber.java not from junit
@@ -31,7 +33,7 @@ public class Hooks {
             scenario.attach(screenshot, "image/png", scenario.getName());
 
         }
-
+        sleep(5);
         Driver.closeDriver();
     }
 
